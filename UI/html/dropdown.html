@@ -1,0 +1,58 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <div utk-dropdown dp-type="{{dp.type}}" dp-disabled="{{dp.disabled}}" dp-items="items" dp-width="{{dp.width}}" ng-model="val"></div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Width:</td>
+                        <td><input type="text" ng-model="dp.width"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enable:</td>
+                        <td><utk-checkbox chk-text="Disable" ng-model="dp.disabled"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="dp.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Value:</td>
+                        <td>{{val}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-dropdown dp-items="items"
+    dp-type="{{dp.type}}"
+    dp-disabled="{{dp.disabled}}"
+    dp-width="200px"
+    dp-changed="change(value)"
+    ng-model="selValue"&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.items = [
+        {name: "One", value: 1},
+        {name: "Two", value: 2},
+        {name: "Three", value: 3}
+    ];
+    
+    //Other code...
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

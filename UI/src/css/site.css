@@ -1,0 +1,11 @@
+﻿.palette {
+    width: 96px;
+    height: 96px;
+    border: 1px solid #767676;
+    margin: auto;    
+}
+
+.palette-desc {
+    text-align: center;
+    margin: auto;
+}

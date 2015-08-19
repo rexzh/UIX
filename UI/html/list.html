@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <utk-list lst-data="data">
+                <utk-list-item>
+                    <span utk-bind-html-ex="item.html"></span>
+                    <utk-badge bdg-text="{{item.badge}}"></utk-badge>
+                </utk-list-item>
+            </utk-list>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-list lst-data="data" lst-item-click="itemClick(value)"&gt;
+    &lt;div utk-list-item&gt;
+        &lt;span utk-bind-html-ex="item.html"&gt;&lt;/span&gt;
+        &lt;div utk-badge bdg-text="{{item.badge}}"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.data = [
+        { html: "Inbox", badge: 3 },
+        { html: "Sent" },
+        { html: "Draft", badge: 5 },
+        { html: "delete", badge: 15 },
+        { html: "&lt;a ng-click='test()'>RSS1&lt;/a&gt; | &lt;a>RSS2&lt;/a&gt; | &lt;a>RSS3&lt;/a&gt;" },
+        { html: "sync error" }
+    ];
+    
+    $scope.test = function(){
+        //TODO:
+    };
+    $scope.itemClick = function (item) {
+        //TODO:
+    };
+}			</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

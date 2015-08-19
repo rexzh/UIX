@@ -1,0 +1,42 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-checkbox chk-text="{{chk.text}}" chk-type="{{chk.type}}" chk-disabled="{{chk.disabled}}" ng-model="agree" chk-changed="chkChanged(value)"></utk-checkbox>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Text:</td>
+                        <td><input type="text" ng-model="chk.text"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enable:</td>
+                        <td><utk-checkbox chk-text="Disable" ng-model="chk.disabled"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="chk.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Value:</td>
+                        <td>{{agree}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-checkbox chk-text="{{chk.text}}"    
+    chk-type="{{chk.type}}"
+    chk-disabled="{{chk.disabled}}"
+    chk-changed="chkChanged(value)"
+    ng-model="agree"&gt;
+&lt;/div&gt;</utk-code>
+</div>

@@ -1,0 +1,19 @@
+<div class="selectable">
+    <h3>Primary</h3>
+    <div class="row" ng-repeat="colors in colorArray">
+        <div class="col-md-3" ng-repeat="c in colors">
+            <div class="palette" ng-style="{'background-color': '#{{c}}'}">
+            </div>
+            <div class="palette-desc">#{{c}}</div>
+        </div>
+    </div>
+
+    <h3>Gradient</h3>
+    <div class="row">
+        <div class="col-md-3" ng-repeat="cg in colorGradient">
+            <div class="palette" ng-style="{'background': 'linear-gradient(#{{cg[0]}}, #{{cg[1]}})'}">
+            </div>
+            <div class="palette-desc">#{{cg[0]}} ~ #{{cg[1]}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿.axis path, .axis line {
+    fill: none;
+    stroke: #767676;
+    /*shape-rendering: optimizeSpeed;*/
+}
+        
+.axis text {
+    font-size: 12px;
+}
+
+.chart_tip {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: solid 1px #404040;
+    opacity: 0.8;
+    background-color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+path {
+    stroke-width: 2;
+    fill: none;
+    opacity: 0.8;
+}
+
+circle {
+    stroke-width: 2;
+    fill: white;
+    opacity: 0.8;
+}
+
+.pie{
+    stroke: #aaa;
+    stroke-width: 1;
+}

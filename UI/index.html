@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="AppModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lepton</title>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/css/bootstrap-plugin.css" rel="stylesheet">
+    <link href="lib/css/prism.css" rel="stylesheet">
+    <link href="src/css/utk.css" rel="stylesheet">
+    <link href="src/css/utk.chart.css" rel="stylesheet">
+    <link href="src/css/site.css" rel="stylesheet">
+</head>
+<body class="unselectable">
+    <div ng-controller="HeaderCtrl">
+        <div utk-header hdr-text="Lepton" hdr-img="images/green-l.jpg" menu-data="menu"></div>
+    </div>
+        
+    <div ng-view class="container-fluid"></div>
+
+
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/spin.min.js"></script>
+    <script src="lib/js/d3.min.js"></script>
+    <script src="lib/js/prism.js"></script>
+    <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/angular-route.min.js"></script>
+
+    <script src="src/js/utk.service.js"></script>
+    <script src="src/js/utk.js"></script>
+    <script src="src/js/utk.chart.js"></script>
+
+    <script src="src/app.js"></script>
+    <script src="src/js/controllers.js"></script>
+</body>
+</html>

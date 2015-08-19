@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD769971-1825-47A2-B2B8-7292F4BE83E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html\accordion.html" />
+    <Content Include="html\alert.html" />
+    <Content Include="html\badge.html" />
+    <Content Include="html\calendar.html" />
+    <Content Include="html\carousel.html" />
+    <Content Include="html\color.html" />
+    <Content Include="html\button.html" />
+    <Content Include="html\checkbox.html" />
+    <Content Include="html\barchart.html" />
+    <Content Include="html\flip.html" />
+    <Content Include="html\input.html" />
+    <Content Include="html\plotchart.html" />
+    <Content Include="html\popover.html" />
+    <Content Include="html\radarchart.html" />
+    <Content Include="html\table.html" />
+    <Content Include="html\label.html" />
+    <Content Include="html\list.html" />
+    <Content Include="html\panel.html" />
+    <Content Include="html\dialog.html" />
+    <Content Include="html\dropdown.html" />
+    <Content Include="html\linechart.html" />
+    <Content Include="html\modal.html" />
+    <Content Include="html\msgbox.html" />
+    <Content Include="html\pagination.html" />
+    <Content Include="html\piechart.html" />
+    <Content Include="html\progress.html" />
+    <Content Include="html\radiobutton.html" />
+    <Content Include="html\home.html" />
+    <Content Include="html\tab.html" />
+    <Content Include="html\toast.html" />
+    <Content Include="html\tooltip.html" />
+    <Content Include="html\wait.html" />
+    <Content Include="images\0.svg" />
+    <Content Include="images\1.svg" />
+    <Content Include="images\2.svg" />
+    <Content Include="images\3.svg" />
+    <Content Include="images\green-l.jpg" />
+    <Content Include="lib\css\bootstrap-plugin.css" />
+    <Content Include="lib\css\bootstrap-theme.css" />
+    <Content Include="lib\css\bootstrap-theme.min.css" />
+    <Content Include="lib\css\bootstrap.css" />
+    <Content Include="lib\css\bootstrap.min.css" />
+    <Content Include="index.html" />
+    <Content Include="lib\css\prism.css" />
+    <Content Include="lib\fonts\Roboto-Light.svg" />
+    <Content Include="lib\js\angular-route.min.js" />
+    <Content Include="lib\js\angular.min.js" />
+    <Content Include="lib\js\bootstrap.js" />
+    <Content Include="lib\js\bootstrap.min.js" />
+    <Content Include="lib\js\d3.min.js" />
+    <Content Include="lib\js\jquery.min.js" />
+    <Content Include="lib\js\prism.js" />
+    <Content Include="lib\js\spin.min.js" />
+    <Content Include="src\app.js" />
+    <Content Include="src\css\site.css" />
+    <Content Include="src\css\utk.chart.css" />
+    <Content Include="src\css\utk.css" />
+    <Content Include="src\js\controllers.js" />
+    <Content Include="src\js\utk.chart.js" />
+    <Content Include="src\js\utk.js" />
+    <Content Include="src\js\utk.service.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\css\bootstrap-theme.css.map" />
+    <None Include="lib\css\bootstrap.css.map" />
+    <None Include="lib\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="lib\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="lib\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="lib\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="lib\fonts\Roboto-Light.eot" />
+    <None Include="lib\fonts\Roboto-Light.ttf" />
+    <None Include="lib\fonts\Roboto-Light.woff" />
+    <None Include="lib\js\angular-route.min.js.map" />
+    <None Include="lib\js\angular.min.js.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

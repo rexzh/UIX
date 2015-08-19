@@ -1,0 +1,60 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <utk-flip flp-width="{{flp.width}}" flp-height="{{flp.height}}" flp-trigger="{{flp.trigger}}" flp-side="{{flp.side}}" style="font-size: 300%">
+                <utk-flip-front flp-type="{{flp.frontType}}">
+                    {{flp.frontText}}
+                </utk-flip-front>
+                <utk-flip-back flp-type="{{flp.backType}}">
+                    {{flp.backText}}
+                </utk-flip-back>
+            </utk-flip>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Size:</td>
+                        <td>Width:<input type="text" ng-model="flp.width"/>Height:<input type="text" ng-model="flp.height"/></td>
+                    </tr>
+                    <tr>
+                        <td>Front Text:</td>
+                        <td><input type="text" ng-model="flp.frontText"/></td>
+                    </tr>
+                    <tr>
+                        <td>Front Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="flp.frontType" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Back Text:</td>
+                        <td><input type="text" ng-model="flp.backText"/></td>
+                    </tr>
+                    <tr>
+                        <td>Back Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="flp.backType" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-flip 
+    flp-trigger="{{flp.trigger}}"
+    flp-side="{{flp.side}}"
+    flp-width="{{flp.width}}"
+    style="font-size: 300%"&gt;
+    &lt;div utk-flip-front flp-type="{{flp.frontType}}"&gt;
+        {{flp.frontText}}
+    &lt;/div&gt;
+    &lt;div utk-flip-back flp-type="{{flp.backType}}"&gt;
+        {{flp.backText}}
+    &lt;/div&gt;
+&lt;/div&gt;
+</utk-code>
+</div>

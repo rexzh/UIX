@@ -1,0 +1,33 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <div utk-alert alt-type="{{alt.type}}" alt-closable="{{alt.closable}}">This is a <a class="alert-link">log</a></div>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="alt.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Closeable:</td>
+                        <td><utk-checkbox chk-text="Closable" ng-model="alt.closable"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-alert 
+    alt-type="info" 
+    alt-closable="false"&gt;
+    This is a &lt;a class="alert-link"&gt;log&lt;/a&gt;
+&lt;/div&gt;</utk-code>
+</div>

@@ -1,0 +1,30 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-label lbl-text="{{lbl.text}}" lbl-type="{{lbl.type}}"></utk-label>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Text:</td>
+                        <td><input type="text" ng-model="lbl.text"/></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="lbl.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-label lbl-text="{{lbl.text}}" lbl-type="{{lbl.type}}"&gt;
+&lt;/div&gt;</utk-code>
+</div>

@@ -1,0 +1,37 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <div utk-progress pgr-progress="{{pgr.progress}}" pgr-type="{{pgr.type}}" pgr-label="{{pgr.label}}"></div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Progress:</td>
+                        <td><input type="text" ng-model="pgr.progress"/></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="pgr.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Label:</td>
+                        <td><utk-checkbox chk-text="Label" ng-model="pgr.label"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-progress 
+    pgr-progress="{{pgr.progress}}" 
+    pgr-type="{{pgr.type}}" 
+    pgr-label="{{pgr.label}}"&gt;
+&lt;/div&gt;</utk-code>
+</div>

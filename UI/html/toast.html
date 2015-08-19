@@ -1,0 +1,39 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-button btn-text="Add toast" ng-click="toast()"></utk-button>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Text:</td>
+                        <td><input type="text" ng-model="tst.text"/></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="tst.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Sticky</td>
+                        <td><utk-checkbox chk-text="Sticky" ng-model="tst.sticky"></utk-checkbox></td>
+                    </tr>					
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="js" class="selectable">//Inject toast service
+function Ctrl($scope, toast) {
+    $scope.click = function() {
+        //...
+        toast.push(text, type, sticky);
+    }
+}</utk-code>
+</div>

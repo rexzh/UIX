@@ -1,0 +1,50 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <utk-carousel  crs-interval="2000" crs-items="items"
+                crs-indicator="{{crs.indicator}}" crs-navigator="{{crs.navigator}}">
+            </utk-carousel>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Indicator:</td>
+                        <td><utk-checkbox chk-text="Indicator" ng-model="crs.indicator"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Navigator:</td>
+                        <td><utk-checkbox chk-text="Navigator" ng-model="crs.navigator"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-carousel  
+    crs-interval="2000" 
+    crs-items="items"
+    crs-indicator="{{crs.indicator}}" 
+    crs-navigator="{{crs.navigator}}"&gt;
+&lt;/div&gt;</utk-code>
+</utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.items = [
+        {img: './images/0.svg', text: 'ABC', alt: 'Text One'},
+        {img: './images/1.svg', text: 'Pic Two', alt: 'Text Two'},
+        {img: './images/2.svg', text: 'DEF', alt: 'Text Three'},
+        {img: './images/3.svg', text: 'Pic Four', alt: 'Text Four'},
+    ];
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

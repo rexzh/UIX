@@ -1,0 +1,48 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-radiogroup grp-name="x" grp-type="{{rb.type}}" ng-model="x">
+                <utk-radiobutton rb-text="{{rb.text[0]}}" rb-value="Y"></utk-radiobutton>
+                <utk-radiobutton rb-text="{{rb.text[1]}}" rb-value="N" rb-disabled="{{rb.disabled}}"></utk-radiobutton>
+            </utk-radiogroup>
+            
+            <utk-radiogroup grp-type="info" ng-model="y">
+                <utk-radiobutton rb-text="X" rb-value="X"></utk-radiobutton>
+                <utk-radiobutton rb-text="Y" rb-value="Y"></utk-radiobutton>
+            </utk-radiogroup>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Text:</td>
+                        <td><input type="text" ng-model="rb.text[0]"/>&nbsp;<input type="text" ng-model="rb.text[1]"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enable:</td>
+                        <td><utk-checkbox chk-text="Disable" ng-model="rb.disabled"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="rb.type" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Value:</td>
+                        <td>{{x}} : {{y}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-radiogroup grp-name="x" grp-type="{{rb.type}}" ng-model="x" rb-changed="changed(value)"&gt;
+    &lt;div utk-radiobutton rb-text="{{rb.text[0]}}" rb-value="Y"&gt;&lt;/div&gt;
+    &lt;div utk-radiobutton rb-text="{{rb.text[1]}}" rb-value="N" rb-disabled="{{rb.disabled}}"&gt;&lt;/div&gt;
+&lt;/div&gt;</utk-code>
+</div>

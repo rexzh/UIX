@@ -1,0 +1,43 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <utk-tab-set tab-changed="tabChanged(tab)">
+                <utk-tab tab-header="Tab 1">
+                    Content in tab 1
+                </utk-tab>
+                <utk-tab tab-header="Tab 2">
+                    Content in tab 2
+                </utk-tab>
+                <utk-tab tab-header="Tab 3">
+                    Content in tab 3
+                </utk-tab>
+            </utk-tab-set>
+        </div>
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-tab-set tab-changed="tabChanged(tab)"&gt;
+    &lt;div utk-tab tab-header="Tab 1"&gt;
+        Content in tab 1
+    &lt;/div&gt;
+    &lt;div utk-tab tab-header="Tab 2"&gt;
+        Content in tab 2
+    &lt;/div&gt;
+    &lt;div utk-tab tab-header="Tab 3"&gt;
+        Content in tab 3
+    &lt;/div&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+            <utk-tab tab-header="JavaScript">
+                <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.tabChanged = function(tab) {
+        //TODO:console.log(tab.tabHeader);
+    }
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

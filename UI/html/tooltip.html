@@ -1,0 +1,45 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <span>Hover on the link:</span>
+            <utk-tooltip tip-text="{{tip.text}}" tip-placement="{{tip.placement}}" tip-trigger="{{tip.trigger}}">
+                <a>ABCDEFG</a>
+            </utk-tooltip>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Text:</td>
+                        <td><input type="text" ng-model="tip.text"/></td>
+                    </tr>
+                    <tr>
+                        <td>Placement:</td>
+                        <td><utk-dropdown dp-items="placement" ng-model="tip.placement" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Trigger:
+                            <utk-tooltip tip-text="You may pass multiple triggers; separate them with a space">
+                                <a>?</a>
+                            </utk-tooltip>
+                        </td>
+                        <td><utk-dropdown dp-items="trigger" ng-model="tip.trigger" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-tooltip tip-text="{{tip.text}}" 
+    tip-placement="{{tip.placement}}"
+    tip-container="false"
+    tip-trigger="hover"&gt;
+    &lt;a&gt;ABCDEFG&lt;/a&gt;
+&lt;/div&gt;</utk-code>
+</div>

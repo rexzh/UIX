@@ -1,0 +1,84 @@
+<div>
+    <div class="row">
+        <div class="col-md-5">
+            <utk-plotchart chart-data="data" chart-tip-text="tipText(tip)"
+                chart-colors="colors" chart-width="{{chart.width}}" chart-height="{{chart.height}}" chart-margin="{{chart.margin}}"
+                chart-axis-color="{{chart.axisColor}}" chart-axis-text-color="{{chart.axisTextColor}}"
+                chart-x-text="{{chart.xText}}" chart-y-text="{{chart.yText}}"
+                chart-show-tip="{{chart.showTip}}" chart-legend="{{chart.legend}}">
+                <div class="chart_tip"></div>
+            </utk-plotchart>
+        </div>
+        <div class="col-md-7">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data:</td>
+                        <td><utk-button btn-text="Generate" btn-size="xsmall" ng-click="generate()"></utk-button></td>
+                    </tr>
+                    <tr>
+                        <td>Size:</td>
+                        <td>Width: <input type="text" ng-model="chart.width"></input> Height: <input type="text" ng-model="chart.height"></input> Margin: <input type="text" ng-model="chart.margin"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Text:</td>
+                        <td>X-Text: <input type="text" ng-model="chart.xText"></input> Y-Text: <input type="text" ng-model="chart.yText"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Axis (Text) Color:</td>
+                        <td>Axis: <utk-label lbl-text="{{chart.axisColor}}"></utk-label> Axis-Text: <utk-label lbl-text="{{chart.axisTextColor}}"></utk-label></td>
+                    </tr>
+                    <tr>
+                        <td>Show Tip Text:</td>
+                        <td><utk-checkbox chk-text="Show Tip" ng-model="chart.showTip"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Draw Legend:</td>
+                        <td><utk-checkbox chk-text="Legend" ng-model="chart.legend"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="html" class="selectable">&lt;utk-plotchart 
+    chart-data="data" 
+    chart-tip-text="tipText(tip)"
+    chart-colors="colors"
+    chart-width="{{chart.width}}"
+    chart-height="{{chart.height}}" 
+    chart-margin="{{chart.margin}}"
+    chart-axis-color="{{chart.axisColor}}"
+    chart-axis-text-color="{{chart.axisTextColor}}"
+    chart-x-text="{{chart.xText}}"
+    chart-y-text="{{chart.yText}}"
+    chart-show-tip="{{chart.showTip}}"
+    chart-legend="{{chart.legend}}"&gt;
+    &lt;div class="chart_tip"&gt;&lt;/div&gt;
+&lt;/utk-plotchart&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.data = { 
+        "Red": [{x: 10, y: 10}, {x: 15, y: 20}, {x: 18, y: 17}], 
+        "Green": [{x: 16, y: 8}, {x: 18, y: 9}, {x: 20, y: 19}],
+        "Yellow": [{x: 3, y: 4}, {x: 6, y: 17}, {x: 7, y: 8}]
+    };
+    
+    $scope.tipText = function(tip){		
+        tip.element.text(tip.data.x + ", " + tip.data.y);
+    };    
+    
+    //Other code...
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

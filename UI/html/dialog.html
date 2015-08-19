@@ -1,0 +1,54 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-button btn-text="Open Dialog" ng-click="open()"></utk-button>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Title:</td>
+                        <td><input type="text" ng-model="dlg.title"/></td>
+                    </tr>
+                    <tr>
+                        <td>Backdrop:</td>
+                        <td><utk-checkbox chk-text="Backdrop" ng-model="dlg.backdrop"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard:</td>
+                        <td><utk-checkbox chk-text="Keyboard(Esc)" ng-model="dlg.keyboard"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Result:</td>
+                        <td>{{result}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="js" class="selectable">//Inject dialog service
+function Ctrl($scope, dialog) {
+    dialog.show({
+        title: $scope.dlg.title,
+        template: '&lt;p&gt;Any html&lt;/p&gt;',
+        //templateUrl: './html/modal.html',//Alternative to template
+        controller: 'ModalXCtrl',
+        buttons: [
+            { text: "OK", icon: "ok", value: true},
+            { text: "Cancel", type: "default", icon: "remove", value: false }
+        ],
+        backdrop: $scope.backdrop,
+        keyboard: $scope.keyboard,
+        params: {data: 10} //Optional, any json object, will be pass to dialog's controller's scope.$params
+    }).then(function(result){
+        $scope.result = result;
+    });
+};</utk-code>
+</div>

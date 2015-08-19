@@ -1,0 +1,66 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <utk-table tbl-data="data" tbl-hover="{{tbl.hover}}" tbl-striped="{{tbl.striped}}" tbl-bordered="{{tbl.bordered}}" tbl-condensed="{{tbl.condensed}}">
+                <utk-table-cell utk-bind-html-ex="item"></utk-table-cell>
+            </utk-table>
+        </div>
+        <div class="col-md-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hover:</td>
+                        <td><utk-checkbox chk-text="Hover" ng-model="tbl.hover"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Striped:</td>
+                        <td><utk-checkbox chk-text="Striped" ng-model="tbl.striped"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Bordered:</td>
+                        <td><utk-checkbox chk-text="Bordered" ng-model="tbl.bordered"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Condensed:</td>
+                        <td><utk-checkbox chk-text="Condensed" ng-model="tbl.condensed"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-table
+    tbl-data="data"
+    tbl-hover="{{tbl.hover}}"
+    tbl-striped="{{tbl.striped}}"
+    tbl-bordered="{{tbl.bordered}}"
+    tbl-condensed="{{tbl.condensed}}"&gt;
+    &lt;!--Use item to reference--&gt;
+    &lt;div utk-table-cell utk-bind-html-ex="item"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.data = [
+        ['#', 'First Name', 'Last Name', 'Username'],
+        ['1', 'Mark', 'Otto', '<a ng-click="click()">@mdo</a>'],
+        ['2', 'Jacob', 'Thornton', '<a ng-click="click()">@fat</a>'],
+        ['3', 'Larry the Bird', '', '<a ng-click="click()">@twitter</a>']
+    ];
+    
+    $scope.click = function() {
+        //TODO:
+    }
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

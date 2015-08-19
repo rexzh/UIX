@@ -1,0 +1,78 @@
+<div>
+    <div class="row">
+        <div class="col-md-5">
+            <utk-radarchart chart-data="data" chart-width="{{chart.width}}" chart-height="{{chart.height}}" chart-margin="{{chart.margin}}"
+                chart-group-text="groupText" chart-levels="{{chart.levels}}" chart-show-tip="{{chart.showTip}}" chart-legend="{{chart.legend}}"
+                chart-tip-text="tipText(tip)" chart-click="click(data)">
+                <div class="chart_tip"></div>
+            </utk-radarchart>
+        </div>
+        <div class="col-md-7">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data:</td>
+                        <td><utk-button btn-text="Generate" btn-size="xsmall" ng-click="generate()"></utk-button></td>
+                    </tr>
+                    <tr>
+                        <td>Axis (Text) Color:</td>
+                        <td>Axis: <utk-label lbl-text="{{chart.axisColor}}"></utk-label> Axis-Text: <utk-label lbl-text="{{chart.axisTextColor}}"></utk-label></td>
+                    </tr>
+                    <tr>
+                        <td>Size:</td>
+                        <td>Width: <input type="text" ng-model="chart.width"></input> Height: <input type="text" ng-model="chart.height"></input> Margin: <input type="text" ng-model="chart.margin"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Levels:</td>
+                        <td>Width: <input type="text" ng-model="chart.levels"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Show Tip Text:</td>
+                        <td><utk-checkbox chk-text="Show Tip" ng-model="chart.showTip"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Draw Legend:</td>
+                        <td><utk-checkbox chk-text="Legend" ng-model="chart.legend"></utk-checkbox></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="html" class="selectable">&lt;div utk-radarchart chart-data="data" 
+    chart-colors="colors" 
+    chart-width="{{chart.width}}" 
+    chart-height="{{chart.height}}"
+    chart-margin="{{chart.margin}}"
+    chart-levels="{{chart.levels}}"
+    chart-legend="{{chart.legend}}"
+    chart-show-tip="{{chart.showTip}}"
+    chart-tip-text="tipText(tip)"
+    chart-click="click(data, index)"&gt;
+    &lt;div class="chart_tip"&gt;&lt;/div&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.data = { "Paladin": [10, 4, 10, 8, 5, 3], "Monk": [8, 6, 8, 6, 6, 9], "Necromancer": [6, 9, 4, 5, 7, 7]};
+    $scope.groupText = ['HP', 'MP', 'ATK', 'DEF', 'MDF', 'DEX'];
+    
+    $scope.tipText = function(e, d, i){
+        tip.element.text(tip.data.key + ': ' + $scope.groupText[tip.index] + ': ' + tip.data.value);
+    };
+    
+    //$scope.colors = [['#F9A006', '#D97E00'], ... ];
+    //Other code...
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>
+

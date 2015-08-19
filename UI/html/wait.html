@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-button btn-text="Show wait 3 second" ng-click="spin()"></utk-button>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lines:</td>
+                        <td><input type="text" ng-model="wait.lines"/></td>
+                    </tr>
+                    <tr>
+                        <td>Speed:</td>
+                        <td><input type="text" ng-model="wait.speed"/></td>
+                    </tr>
+                    <tr>
+                        <td>Color:</td>
+                        <td><input type="text" ng-model="wait.color"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="js" class="selectable">//Inject wait service
+function Ctrl($scope, wait) {
+    $scope.spin = function() {
+        wait.show({
+            lines: 12,
+            speed: 1,
+            color: '#767676'
+        });
+    }
+    
+    //wait.hide();
+};</utk-code>
+</div>

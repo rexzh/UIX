@@ -1,0 +1,49 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <div utk-pagination pg-total-records="{{pg.total}}" pg-number-per-page="{{pg.perPage}}" pg-changed="change(page)">
+    </div>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Records Number:</td>
+                        <td><input type="text" ng-model="pg.total"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Number Per Page:</td>
+                        <td><input type="text"ng-model="pg.perPage"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Current Page:</td>
+                        <td>{{current}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-pagination 
+    pg-total-records="{{pg.total}}"
+    pg-number-per-page="{{pg.perPage}}" 
+    pg-changed="change(page)"&gt;
+&lt;/div&gt;</utk-code>
+</utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.change = function(p) {
+        //TODO:
+    }
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

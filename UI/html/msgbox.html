@@ -1,0 +1,57 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <utk-button btn-text="Open MsgBox" ng-click="open()"></utk-button>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Title:</td>
+                        <td><input type="text" ng-model="msgbox.title"/></td>
+                    </tr>
+                    <tr>
+                        <td>Message:</td>
+                        <td><input type="text" ng-model="msgbox.message"/></td>
+                    </tr>
+                    <tr>
+                        <td>Backdrop:</td>
+                        <td><utk-checkbox chk-text="Backdrop" ng-model="msgbox.backdrop"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Keyboard:</td>
+                        <td><utk-checkbox chk-text="Keyboard(Esc)" ng-model="msgbox.keyboard"></utk-checkbox></td>
+                    </tr>
+                    <tr>
+                        <td>Result:</td>
+                        <td>{{result}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="js" class="selectable">//Inject msgbox service
+function Ctrl($scope, msgbox) {
+    $scope.open = function() {
+        msgbox.show({
+            title: 'Info',
+            message: 'Done!',
+            buttons: [
+                { text: "OK", icon: "ok", value: true}
+            ],
+            backdrop: $scope.backdrop,
+            keyboard: $scope.keyboard
+        }).then(function(result){
+            //result is button value
+            //Do something
+        });
+    }
+};</utk-code>
+</div>

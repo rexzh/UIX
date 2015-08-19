@@ -1,0 +1,41 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <div utk-panel pnl-type="{{pnl.type}}">
+                <div utk-panel-header>Panel</div>
+                <div utk-panel-body>
+                    body here
+                </div>
+                <div utk-panel-footer>
+                    Footer
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>                    
+                        <td>Style:</td>
+                        <td><utk-dropdown dp-items="types" ng-model="pnl.type" dp-width="160px"></utk-dropdown></td>                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-code cd-lang="markup" class="selectable">&lt;div utk-panel pnl-type="{{pnl.type}}"&gt;
+    &lt;div utk-panel-header&gt;Panel&lt;/div&gt;
+    &lt;div utk-panel-body&gt;
+        body here
+    &lt;/div&gt;
+    &lt;div utk-panel-footer&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/div&gt;</utk-code>
+</div>

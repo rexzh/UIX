@@ -1,0 +1,44 @@
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <utk-accordion acd-shown="shown(pane)">
+                <utk-accordion-panel apn-title="item 1">
+                    Hello
+                </utk-accordion-panel>
+                <utk-accordion-panel apn-title="item 2">
+                    Cool
+                </utk-accordion-panel>
+                <utk-accordion-panel apn-title="item 3">
+                    WOW
+                </utk-accordion-panel>
+            </utk-accordion>
+        </div>
+        <div class="col-md-8">
+            
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-accordion
+    acd-shown="shown(pane)"&gt;
+    &lt;div utk-accordion-panel apn-title="item 1"&gt;
+        Hello
+    &lt;/div&gt;
+    &lt;div utk-accordion-panel apn-title="item 2"&gt;
+        Cool
+    &lt;/div&gt;
+    &lt;div utk-accordion-panel apn-title="item 3"&gt;
+        WOW
+    &lt;/div&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+            <utk-tab tab-header="JavaScript">
+                <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.shown = function(pane) {
+        //TODO:console.log(pane.title);
+    }
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>

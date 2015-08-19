@@ -1,0 +1,57 @@
+<div>
+    <div class="row">
+        <div class="col-md-2">
+            <div utk-calendar type="text" cld-placement="{{cld.placement}}" cld-format="{{cld.format}}"
+                    cld-pick="pick(date)" cld-date-enable="enable(date)" ng-model="value"></div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Format:</td>
+                        <td><input type="text" ng-model="cld.format"/></td>
+                    </tr>
+                    <tr>
+                        <td>Placement:</td>
+                        <td><utk-dropdown dp-items="placement" ng-model="cld.placement" dp-width="160px"></utk-dropdown></td>
+                    </tr>
+                    <tr>
+                        <td>Value:</td>
+                        <td>{{value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <h3>Syntax:</h3>
+    <utk-tab-set>
+        <utk-tab tab-header="HTML">
+            <utk-code cd-lang="markup" class="selectable">&lt;div utk-calendar
+    cld-placement="{{cld.placement}}"    
+    cld-pick="pick(date)"
+    cld-format="{{cld.format}}"
+    cld-date-enable="enable(date)"
+    ng-model="value"&gt;
+&lt;/div&gt;</utk-code>
+        </utk-tab>
+        <utk-tab tab-header="JavaScript">
+            <utk-code cd-lang="js" class="selectable">function Ctrl($scope) {
+    $scope.enable = function(d) {
+        var date = new Date(d.year, d.month - 1, d.day);
+        var w = date.getDay();
+        if(w == 0 || w == 6)
+            return false;
+        return true;
+    }
+    
+    //Other code...
+}</utk-code>
+        </utk-tab>
+    </utk-tab-set>
+</div>
