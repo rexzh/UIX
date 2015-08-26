@@ -181,6 +181,7 @@
             keyboard: true,
             backdrop: true
         };
+
         return {
             show: function (options) {
                 var deferred = $q.defer();
@@ -208,23 +209,15 @@
 
                     var mft = element.find('.modal-footer').eq(0);
                     mft.append(ft);
-
-                    if (options.controller) {
-                        element.attr("ng-controller", options.controller);
-                    }
-
-                    var scope = $rootScope.$new();
-                    if(options.params) {
-                        scope.$params = options.params;
-                    }
-                    $compile(element)(scope);
-
-                    scope.close = function (result) {
+                    console.log(opt);
+                    $compile(element)(opt.scope);
+                    opt.scope.close = function (result) {
                         deferred.resolve(result);
                         element.modal('hide');
                     };
-                    if (opt.param) {
-                        scope.param = opt.param;
+                    
+                    if (opt.params) {
+                        opt.scope.$params = opt.params;
                     }
 
                     element.on('hide.bs.modal', function (e) {
@@ -282,7 +275,7 @@
                 t.addClass('alert-' + type);
                 t.append(message);
                 container.append(t);
-                
+
                 t.find('button').eq(0).on('click', function() {					
                     remove(t);
                 });

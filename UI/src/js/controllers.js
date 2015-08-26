@@ -267,15 +267,15 @@ app.controller('DialogCtrl', function ($scope, dialog) {
     $scope.open = function(){
         dialog.show({
             title: $scope.dlg.title,
-            template: '<p>{{text}}</p>',
-            controller: 'ModalXCtrl',
+            template: '<p>{{text}}</p>',            
             buttons: [
                 { text: "OK", icon: "ok", value: true},
                 { text: "Cancel", type: "default", icon: "remove", value: false }
             ],
             backdrop: $scope.dlg.backdrop,
-            keyboard: $scope.dlg.keyboard,
-            params: {data: 10}
+            keyboard: $scope.dlg.keyboard,            
+            params: {data: 10},
+            scope: $scope
         }).then(function(result){
             $scope.result = result;
         });

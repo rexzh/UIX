@@ -39,7 +39,7 @@ function Ctrl($scope, dialog) {
         title: $scope.dlg.title,
         template: '&lt;p&gt;Any html&lt;/p&gt;',
         //templateUrl: './html/modal.html',//Alternative to template
-        controller: 'ModalXCtrl',
+        scope: $scope,
         buttons: [
             { text: "OK", icon: "ok", value: true},
             { text: "Cancel", type: "default", icon: "remove", value: false }
